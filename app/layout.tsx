@@ -12,11 +12,6 @@ const geistMono = Geist_Mono({
 	subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-	title: "inkpilots-template-nextjs-approuter",
-	description: "A Next.js App Router template by Inkpilots",
-};
-
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -24,6 +19,13 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>InkPilots Next.js App Router Template</title>
+        <meta name="description" content="A Next.js application template integrated with InkPilots SDK." />
+        <link rel="icon" type="image/x-icon" href="https://inkpilots.com/favicon.ico" />
+      </head>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
