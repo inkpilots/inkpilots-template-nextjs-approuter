@@ -12,11 +12,21 @@ export type ContactLink = {
   url: string;
 };
 
-export const formatDate = (value?: string | Date | null) => {
+export const formatDate = (value?: string | Date | null, locale: string = "en") => {
   if (!value) return null;
   const date = typeof value === "string" ? new Date(value) : value;
   if (Number.isNaN(date.getTime())) return null;
-  return date.toLocaleDateString("en-US", {
+
+  // Map app locales to IETF language tags
+  const localeMap: Record<string, string> = {
+    en: "en-US",
+    tr: "tr-TR",
+    de: "de-DE",
+  };
+
+  const dateLocale = localeMap[locale] || "en-US";
+
+  return date.toLocaleDateString(dateLocale, {
     month: "short",
     day: "numeric",
     year: "numeric",

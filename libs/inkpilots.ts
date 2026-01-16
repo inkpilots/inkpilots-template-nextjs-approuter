@@ -15,8 +15,13 @@ type GetAgentArticlesParams = {
 };
 
 export const getWorkspace = async () => {
+  const workspaceId = process.env.INKPILOTS_WORKSPACE_ID;
+  if (!workspaceId) {
+    console.error("INKPILOTS_WORKSPACE_ID is not defined in environment variables.");
+    return;
+  }
   try {
-    const res = await client.getWorkspace("6947344488431e9d91420af4");
+    const res = await client.getWorkspace(workspaceId);
     return res;
   } catch (err) {
     if (err instanceof InkPilotsQuotaExceededError) {

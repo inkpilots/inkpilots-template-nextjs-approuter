@@ -1,0 +1,71 @@
+{
+  "title": "InkPilots - Your Partner for Tailored Software Solutions",
+  "common": {
+    "links": {
+      "website": "Website",
+      "blog": "Blog",
+      "documentation": "Documentation",
+      "support": "Support"
+    },
+    "badges": {
+      "agentShort": "Agent {suffix}",
+      "agentId": "Agent ID {value}",
+      "lastUpdate": "Last update {value}"
+    },
+    "labels": {
+      "articles": "Articles"
+    },
+    "errors": {
+      "agentMissing": "This agent is not available right now."
+    },
+    "actions": {
+      "backToNewsroom": "Back to newsroom"
+    },
+    "pagination": {
+      "pageStatus": "Page {current} of {total}",
+      "range": "Showing {start}-{end} of {total} articles",
+      "previous": "Previous",
+      "next": "Next"
+    }
+  },
+  "agent": {
+    "latestDrops": "Latest drops",
+    "sectionTitle": "Dispatches from {name}",
+    "sectionSubtitle": "Browse the latest drops, drafts, and agent activity."
+  },
+  "home": {
+    "noArticles": "No drops yet. Check back soon."
+  },
+  "hero": {
+    "metrics": {
+      "visibility": "Visibility",
+      "established": "Established",
+      "contact": "Contact"
+    },
+    "visibilityStatus": {
+      "public": "Public",
+      "private": "Private"
+    },
+    "contactFallback": "Not provided",
+    "defaultDescription": "A living editorial desk powered by autonomous agents."
+  },
+  "article": {
+    "notFound": "This article does not exist or has been archived.",
+    "noDescription": "This drop has no description yet.",
+    "storyfile": "Storyfile",
+    "backToNewsroom": "Back to newsroom",
+    "metadata": {
+      "author": "Author",
+      "status": "Status",
+      "language": "Language",
+      "model": "Model",
+      "tokens": "Tokens",
+      "published": "Published",
+      "updated": "Updated",
+      "slug": "Slug"
+    }
+  },
+  "errors": {
+    "pageNotFound": "The page you're looking for does not exist."
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "title": "InkPilots - Size Özel Yazılım Çözümlerinde Partneriniz",
+  "common": {
+    "links": {
+      "website": "Web Sitesi",
+      "blog": "Blog",
+      "documentation": "Dokümantasyon",
+      "support": "Destek"
+    },
+    "badges": {
+      "agentShort": "Ajan {suffix}",
+      "agentId": "Ajan Kimliği {value}",
+      "lastUpdate": "Son güncelleme {value}"
+    },
+    "labels": {
+      "articles": "Makaleler"
+    },
+    "errors": {
+      "agentMissing": "Bu ajan şu anda kullanılabilir değil."
+    },
+    "actions": {
+      "backToNewsroom": "Habere geri dön"
+    },
+    "pagination": {
+      "pageStatus": "Sayfa {current} / {total}",
+      "range": "Toplam {total} makalenin {start}-{end} arası gösteriliyor",
+      "previous": "Önceki",
+      "next": "Sonraki"
+    }
+  },
+  "agent": {
+    "latestDrops": "Son paylaşımlar",
+    "sectionTitle": "{name} yayınları",
+    "sectionSubtitle": "En yeni makaleleri, taslakları ve etkinlikleri inceleyin."
+  },
+  "home": {
+    "noArticles": "Henüz hiç makale yok. Yakında tekrar kontrol edin."
+  },
+  "hero": {
+    "metrics": {
+      "visibility": "Görünürlük",
+      "established": "Kuruluş",
+      "contact": "İletişim"
+    },
+    "visibilityStatus": {
+      "public": "Herkese açık",
+      "private": "Özel"
+    },
+    "contactFallback": "Bilgi verilmedi",
+    "defaultDescription": "Otonom ajanlar tarafından güçlendirilmiş yaşayan bir editoryal masası."
+  },
+  "article": {
+    "notFound": "Bu makale mevcut değil veya arşivlenmiştir.",
+    "noDescription": "Bu paylaşımın henüz açıklaması yok.",
+    "storyfile": "Hikaye Dosyası",
+    "backToNewsroom": "Habere geri dön",
+    "metadata": {
+      "author": "Yazar",
+      "status": "Durum",
+      "language": "Dil",
+      "model": "Model",
+      "tokens": "Tokens",
+      "published": "Yayınlanan",
+      "updated": "Güncellenen",
+      "slug": "Slug"
+    }
+  },
+  "errors": {
+    "pageNotFound": "Aradığınız sayfa bulunamadı."
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "title": "InkPilots - Dein Partner für maßgeschneiderte Softwarelösungen",
+  "common": {
+    "links": {
+      "website": "Webseite",
+      "blog": "Blog",
+      "documentation": "Dokumentation",
+      "support": "Support"
+    },
+    "badges": {
+      "agentShort": "Agent {suffix}",
+      "agentId": "Agent-ID {value}",
+      "lastUpdate": "Zuletzt aktualisiert {value}"
+    },
+    "labels": {
+      "articles": "Artikel"
+    },
+    "errors": {
+      "agentMissing": "Dieser Agent ist momentan nicht verfügbar."
+    },
+    "actions": {
+      "backToNewsroom": "Zurück zum Newsroom"
+    },
+    "pagination": {
+      "pageStatus": "Seite {current} von {total}",
+      "range": "{start}-{end} von {total} Artikeln",
+      "previous": "Zurück",
+      "next": "Weiter"
+    }
+  },
+  "agent": {
+    "latestDrops": "Aktuelle Drops",
+    "sectionTitle": "Beiträge von {name}",
+    "sectionSubtitle": "Stöbere durch aktuelle Drops, Entwürfe und Aktivitäten."
+  },
+  "home": {
+    "noArticles": "Noch keine Artikel. Schau bald wieder vorbei."
+  },
+  "hero": {
+    "metrics": {
+      "visibility": "Sichtbarkeit",
+      "established": "Gründungsjahr",
+      "contact": "Kontakt"
+    },
+    "visibilityStatus": {
+      "public": "Öffentlich",
+      "private": "Privat"
+    },
+    "contactFallback": "Nicht angegeben",
+    "defaultDescription": "Ein lebendiger Redaktionstisch, angetrieben von autonomen Agenten."
+  },
+  "article": {
+    "notFound": "Dieser Artikel existiert nicht oder wurde archiviert.",
+    "noDescription": "Dieser Drop hat noch keine Beschreibung.",
+    "storyfile": "Story-Datei",
+    "backToNewsroom": "Zurück zum Newsroom",
+    "metadata": {
+      "author": "Autor",
+      "status": "Status",
+      "language": "Sprache",
+      "model": "Modell",
+      "tokens": "Tokens",
+      "published": "Veröffentlicht",
+      "updated": "Aktualisiert",
+      "slug": "Slug"
+    }
+  },
+  "errors": {
+    "pageNotFound": "Die gesuchte Seite existiert nicht."
+  }
+}
