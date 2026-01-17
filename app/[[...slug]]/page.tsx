@@ -3,7 +3,6 @@ import Link from "next/link";
 import { getWorkspace } from "@/libs/inkpilots";
 import React from "react";
 
-export const dynamic = "force-static";
 
 const PAGE_SIZE = 6;
 const gradientBackground = "min-h-screen bg-background text-foreground";
@@ -104,7 +103,6 @@ export default async function CatchAllPage({
 
   const locale = (payload?.workspace as unknown as { lang?: string })?.lang || 'en';
   const messages = (await import(`../../messages/${locale}.json`)).default;
-  console.log('Locale:', locale);
 	if (!payload) {
 		return (
 			<main className='flex min-h-screen items-center justify-center bg-background px-6 text-center text-foreground'>
@@ -147,7 +145,7 @@ function HomeView({ data, locale, messages }: { data: WorkspaceData; locale: str
 
 	return (
 		<div className={gradientBackground} style={gradientBackgroundStyle}>
-			<div className='mx-auto flex max-w-7xl flex-col gap-10 lg:gap-12 lg:py-16'>
+			<div className='mx-auto flex max-w-7xl flex-col gap-10 px-4 lg:gap-12 lg:py-16'>
 				<HeroSection
 					workspace={workspace}
 					header={header}
@@ -156,7 +154,7 @@ function HomeView({ data, locale, messages }: { data: WorkspaceData; locale: str
 					messages={messages}
 					locale={locale}
 				/>
-				<section className='rounded-3xl bg-background/30 p-4 md:p-4 sm:p-8'>
+				<section className='rounded-3xl bg-background/30 pb-12'>
 
 					<div className='space-y-6'>
 						{agents.map((agent) => (
@@ -290,7 +288,7 @@ function AgentView({
 
 	return (
 		<div className={gradientBackground} style={gradientBackgroundStyle}>
-			<div className='mx-auto flex max-w-7xl flex-col gap-10 px-6 py-12 lg:gap-12 lg:py-16'>
+			<div className='mx-auto flex max-w-7xl flex-col gap-10 px-4 lg:gap-12 lg:py-16'>
 				<HeroSection
 					workspace={workspace}
 					header={header}
@@ -315,7 +313,7 @@ function AgentView({
 					</Link>
 				</div>
 
-				<section className='rounded-3xl bg-background/30 p-6 sm:p-8'>
+				<section className='rounded-3xl bg-background/30'>
 					<div className='flex flex-col gap-4 border-b border-border/10 pb-6 sm:flex-row sm:items-end sm:justify-between'>
 						<div>
 							<p className='text-xs uppercase tracking-[0.6em] text-primary'>
@@ -350,7 +348,7 @@ function AgentView({
 						</p>
 					)}
 
-					<div className='mt-8 flex flex-col gap-4 border-t border-border/10 pt-6 sm:flex-row sm:items-center sm:justify-between'>
+					<div className='flex flex-col items-center py-6 gap-4 border-t border-border/10 sm:flex-row sm:items-center sm:justify-between'>
 						<div className='text-sm text-foreground/60'>
 							{t(messages, "common.pagination.range", { start: rangeStart.toLocaleString(), end: rangeEnd.toLocaleString(), total: total.toLocaleString() })}
 						</div>
@@ -363,7 +361,7 @@ function AgentView({
 									{t(messages, "common.pagination.previous")}
 								</Link>
 							) : (
-								<span className='inline-flex items-center rounded-full border border-border/10 px-4 py-2 text-sm text-foreground/40'>
+								<span className='inline-flex items-center rounded-full border border-border px-4 py-2 text-sm text-foreground/40'>
 									{t(messages, "common.pagination.previous")}
 								</span>
 							)}
@@ -403,16 +401,9 @@ function ArticleView({ data, slug, locale, messages }: { data: WorkspaceData; sl
 	if (!resolved) {
 		return (
 			<div className={gradientBackground} style={gradientBackgroundStyle}>
-				<div className='mx-auto flex max-w-5xl flex-col gap-10 px-6 py-12 lg:gap-12 lg:py-16'>
-					<HeroSection
-						workspace={workspace}
-						header={header}
-						contactLinks={contactLinks}
-						socialLinks={socialLinks}
-						messages={messages}
-						locale={locale}
-					/>
-					<section className='rounded-3xl border border-border/5 bg-background/30 p-8 text-center'>
+				<div className='mx-auto flex max-w-5xl flex-col gap-10 px-4'>
+
+					<section className='rounded-3xl border border-border/5 bg-background/30 text-center'>
 						<p className='text-lg text-foreground/70'>
 							{t(messages, "article.notFound")}
 						</p>
@@ -448,7 +439,7 @@ function ArticleView({ data, slug, locale, messages }: { data: WorkspaceData; sl
 
 	return (
 		<div className={gradientBackground} style={gradientBackgroundStyle}>
-			<div className='mx-auto flex max-w-5xl flex-col gap-10 px-6 py-12 lg:gap-12 lg:py-16'>
+			<div className='mx-auto flex max-w-7xl px-4 flex-col gap-10 lg:gap-12 lg:py-16'>
 				<HeroSection
 					workspace={workspace}
 					header={header}
@@ -458,11 +449,11 @@ function ArticleView({ data, slug, locale, messages }: { data: WorkspaceData; sl
 					locale={locale}
 				/>
 
-				<section className='rounded-3xl border border-border/5 bg-background/30 p-4 sm:p-8'>
+				<section className='rounded-3xl border pb-12 border-border/5 bg-background/30'>
 					<div className='flex items-center justify-between gap-6 border-b border-border/10 pb-6'>
 						<Link
 							href='/'
-							className='inline-flex items-center rounded-full border border-border/15 px-4 py-2 text-sm text-foreground transition hover:border-primary/60'
+							className='inline-flex bg-surface items-center rounded-full border border-border/15 px-4 py-2 text-sm text-foreground transition hover:border-primary/60'
 						>
 							← {t(messages, "article.backToNewsroom")}
 						</Link>
@@ -479,7 +470,8 @@ function ArticleView({ data, slug, locale, messages }: { data: WorkspaceData; sl
 							{article.title}
 						</h1>
 						<p className='text-base text-foreground/70'>
-							{article.meta?.description || t(messages, "article.noDescription")}
+							{article.meta?.description ||
+								t(messages, "article.noDescription")}
 						</p>
 					</header>
 
@@ -562,7 +554,7 @@ function HeroSection({
 	locale: string;
 }) {
 	return (
-		<header className='rounded-3xl p-4'>
+		<header className='rounded-3xl py-4'>
 			<p className='text-4xl uppercase tracking-[0.6em] text-primary'>
 				{workspace.slug}
 			</p>
